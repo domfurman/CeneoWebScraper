@@ -1,7 +1,11 @@
-{% extends "layout.html.jinja" %}
+{% extends "base.html.jinja" %}
 {% block content %}
-    <ul class="kist-group">
+    <ul class="list-group">
         {% for product in products %}
-            <a href="{{url_for('product', product_id=product)}}">{{product}}</a>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                {{product}}
+                <span class="badge bg-primary rounded-pill">{{loop.index}}</span>
+            </li>
         {% endfor %}
+    </ul>
 {% endblock %}
