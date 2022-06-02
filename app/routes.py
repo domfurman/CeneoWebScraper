@@ -34,7 +34,7 @@ selectors = {
 @app.route('/')
 @app.route('/index')
 @app.route('/index/<name>')
-def index(name="Hello World"):
+def index(name="Hello there"):
     return render_template("index.html.jinja", text=name)
 
 @app.route('/extract/<product_id>')
