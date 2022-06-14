@@ -17,8 +17,8 @@ class Product:
         self.average_score = average_score
         return self
 
-    def __str__():
-        pass
+    def __str__(self):
+        return self.product_name
 
     def __repr__(self):
         pass
@@ -27,7 +27,7 @@ class Product:
         pass
 
     def opinions_to_dict(self):
-
+        pass
 
     def extract_product(self):
         url = f"https://www.ceneo.pl/{self.product_id}#tab=reviews"

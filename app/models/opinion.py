@@ -1,3 +1,4 @@
+from app.routes import author
 from app.utils import get_item
 from app.parameters import selectors
 class Opinion:
@@ -22,7 +23,19 @@ class Opinion:
         pass
 
     def to_dict(self):
-        pass
+        return {
+            "author" = self.author
+            "recommendation" = self.recommendation
+            "stars" = self.stars
+            "content" = self.content
+            "useful" = self.useful
+            "useless" = self.useless
+            "publish_date" = self.publish_date
+            "purchase_date" = self.purchase_date
+            "pros" = self.pros
+            "cons" = self.cons
+            "opinion_id" = self.opinion_id
+        }
     
     def extract_opinion(self, opinion):
         for key, value in selectors.items():
