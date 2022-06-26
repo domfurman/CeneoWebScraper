@@ -2,6 +2,7 @@ import requests
 import os
 import json
 import pandas as pd
+import numpy as np
 from bs4 import BeautifulSoup
 from app.utils import get_item
 from app.models.opinion import Opinion
